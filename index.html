@@ -12,19 +12,23 @@
     <link rel="stylesheet" type="text/css" href="asset/style.css" />
     <link rel="stylesheet" type="text/css" href="asset/loading.css" />
 
-    <style>
-        .loading {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+	<style>
+		.loading {
+			display: flex;
+			justify-content: center;
+			flex-wrap: nowrap; /* 不換行 */
+			gap: 10px;
+			overflow-x: auto; /* 若空間不足，允許橫向滑動 */
+		}
 
-        .loading img {
-            width: 20vw;
-            max-width: 100px;
-        }
-    </style>
+		.loading img {
+			width: 20vw;           /* 固定寬度比例 */
+			aspect-ratio: 1 / 1;   /* 保持 1:1 比例 */
+			max-width: 100px;
+			object-fit: contain;   /* 保證圖片完整顯示 */
+		}
+	</style>
+
 </head>
 
 <body>
@@ -34,7 +38,6 @@
             <img class="ld ld-bounce" src="asset/cocoicon.png" style="animation-duration:1.5s" />
             <img class="ld ld-bounce" src="asset/cocoicon.png" style="animation-duration:3.0s" />
         </div>
-    </div>
     </div>
     <script src="https://dive.nutn.edu.tw/Experiment/js/dive.linker.js"></script>
     <script src="asset/game.js"></script>
