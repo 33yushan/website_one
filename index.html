@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>飲食流言終結者</title>
     <link rel="icon" href="asset/favicon.ico" type="image/x-icon" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
@@ -12,33 +12,49 @@
     <link rel="stylesheet" type="text/css" href="asset/style.css" />
     <link rel="stylesheet" type="text/css" href="asset/loading.css" />
 
-	<style>
-		.loading {
-			display: flex;
-			justify-content: center;
-			flex-wrap: nowrap; /* 不換行 */
-			gap: 10px;
-			overflow-x: auto; /* 若空間不足，允許橫向滑動 */
-		}
+    <style>
+        .loading {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 10px;
+        }
 
-		.loading img {
-			width: 20vw;           /* 固定寬度比例 */
-			aspect-ratio: 1 / 1;   /* 保持 1:1 比例 */
-			max-width: 100px;
-			object-fit: contain;   /* 保證圖片完整顯示 */
-		}
-	</style>
+        .icon-wrapper {
+            width: 20vw;
+            max-width: 100px;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
 </head>
 
 <body>
     <div id="dive-app" class="container">
         <div class="loading" title="點擊後(全螢幕)並開始">
-            <img class="ld ld-bounce" src="asset/cocoicon.png" style="animation-duration:0.7s" />
-            <img class="ld ld-bounce" src="asset/cocoicon.png" style="animation-duration:1.5s" />
-            <img class="ld ld-bounce" src="asset/cocoicon.png" style="animation-duration:3.0s" />
+            <div class="icon-wrapper">
+                <img class="ld ld-bounce" src="asset/cocoicon.png" style="animation-duration:0.7s" />
+            </div>
+            <div class="icon-wrapper">
+                <img class="ld ld-bounce" src="asset/cocoicon.png" style="animation-duration:1.5s" />
+            </div>
+            <div class="icon-wrapper">
+                <img class="ld ld-bounce" src="asset/cocoicon.png" style="animation-duration:3.0s" />
+            </div>
         </div>
     </div>
+
     <script src="https://dive.nutn.edu.tw/Experiment/js/dive.linker.js"></script>
     <script src="asset/game.js"></script>
 </body>
